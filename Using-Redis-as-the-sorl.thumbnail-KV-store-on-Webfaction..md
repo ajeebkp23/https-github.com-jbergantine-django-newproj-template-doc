@@ -12,14 +12,14 @@ SSH in and move to `~/src` (making it if necessary)
 
     $ mkdir -p ~/src && cd $_
 
-Install (from http://redis.io/download)
+Install (from [http://redis.io/download]())
 
     $ wget http://redis.googlecode.com/files/redis-2.6.13.tar.gz
     $ tar xzf redis-2.6.13.tar.gz
     $ cd redis-2.6.13
     $ make
 
-Edit the .conf file (at ~/src/redis-2.6.13/redis.conf)
+Edit the .conf file (at `~/src/redis-2.6.13/redis.conf`)
 
     $ vim redis.conf
 
