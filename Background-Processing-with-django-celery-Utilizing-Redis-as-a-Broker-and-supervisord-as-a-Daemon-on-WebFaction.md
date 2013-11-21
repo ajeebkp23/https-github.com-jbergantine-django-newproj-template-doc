@@ -44,10 +44,11 @@ Create a supervisord.conf script in the project directory next to manage.py:
 
     $ vim supervisord.conf
 
-Add to that (note the first if/else statement is specific here to the MercuryCSC site and is used to set a staging/production switch, this requires staging and production to be on separate webfaction machines. Also note that the username and password are just used to setup a .htpasswd file governing access to the supervisord web admin. (This is pulled heavily from the django-supervisord documentation and this post: [http://fightingrabbits.com/archives/208]()). Replace `<make up a username>` and `<make up a password>` with a username and password (multiple occurrences of each, you can use the same user and pass in both if you want).:
+Add to that (note the first if/else statement is specific here to the MercuryCSC site and is used to set a staging/production switch, this requires staging and production to be on separate webfaction machines. Also note that the username and password are just used to setup a .htpasswd file governing access to the supervisord web admin. (This is pulled heavily from the django-supervisord documentation and this post: [http://fightingrabbits.com/archives/208]()). Replace `<make up a username>` and `<make up a password>` with a username and password (multiple occurrences of each, you can use the same user and pass in both if you want). Replace `<webfaction username>` with your WebFaction account username.:
 
+    ; This sets up the ability to use this on staging and production provided staging and production are on different WebFaction servers. If that isn't relevant just remove the logic and use `command=…`.
     [program:celeryd]
-    {% if environ.HOSTNAME == 'web368.webfaction.com' %}
+    {% if environ.HOSTNAME == 'webXXX.webfaction.com' %}
         command={{ PYTHON }} {{ PROJECT_DIR }}/manage.py celeryd --settings=myproject.settings.staging -l info ; this works
     {% else %}
         command={{ PYTHON }} {{ PROJECT_DIR }}/manage.py celeryd --settings=myproject.settings.production -l info ; this works
@@ -69,11 +70,11 @@ Add to that (note the first if/else statement is specific here to the MercuryCSC
     password=<make up a password>  ; (default is no password (open server))
  
     [supervisord]
-    logfile=/home/rottenxmas/logs/user/supervisord.log  ; (main log file;default $CWD/supervisord.log)
+    logfile=/home/<webfaction username>/logs/user/supervisord.log  ; (main log file;default $CWD/supervisord.log)
     logfile_maxbytes=50MB  ; (max main logfile bytes b4 rotation;default 50MB)
     logfile_backups=10  ; (num of main logfile rotation backups;default 10)
     loglevel=debug  ; (log level;default info; others: debug,warn,trace)
-    pidfile=/home/rottenxmas/supervisord.pid  ; (supervisord pidfile;default supervisord.pid)
+    pidfile=/home/<webfaction username>/supervisord.pid  ; (supervisord pidfile;default supervisord.pid)
     nodaemon=false  ; (start in foreground if true;default false)
     minfds=1024  ; (min. avail startup file descriptors;default 1024)
     minprocs=200  ; (min. avail process descriptors;default 200)
