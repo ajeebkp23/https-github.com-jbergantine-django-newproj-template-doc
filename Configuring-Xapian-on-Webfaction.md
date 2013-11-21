@@ -2,9 +2,9 @@ Make sure not to be in a virtual environment:
 
     $ deactivate
 
-Create ~/src if it doesn't exist yet:
+Create `~/src` if it doesn't exist yet:
 
-    $ mkdir ~/src
+    $ mkdir -p ~/src
 
 Install and configure:
 
