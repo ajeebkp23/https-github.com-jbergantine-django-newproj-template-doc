@@ -1,0 +1,1 @@
+Welcome to the django-newproj-template wiki!
