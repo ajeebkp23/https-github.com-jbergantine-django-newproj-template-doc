@@ -19,7 +19,7 @@ Install (from [http://redis.io/download]())
     $ cd redis-2.6.13
     $ make
 
-Edit the .conf file (at `~/src/redis-2.6.13/redis.conf`)
+Edit the Redis config file (located at `~/src/redis-2.6.13/redis.conf`)
 
     $ vim redis.conf
 
@@ -28,7 +28,7 @@ Change `port 6379` to `port <custom application port number>`
 
 Save and quit.
 
-Copy redis.conf, redis-server and redis-cli to ~/bin
+Copy `redis.conf`, `redis-server` and `redis-cli` to `~/bin`
 
     $ cp redis.conf ~/bin/
     $ cd src && cp redis-server ~/bin/
