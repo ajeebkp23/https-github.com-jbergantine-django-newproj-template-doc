@@ -6,7 +6,7 @@ Add the following to the Django project's python requirements list and install:
     celery-with-redis
     django-supervisor
 
-Add the following to the list of installed apps in the project's settings file. The first line is required for Celery, the second to use the Django database as the broker:
+Add the following to the list of installed apps in the project's settings file.
 
     'djcelery',
     'djsupervisor',
