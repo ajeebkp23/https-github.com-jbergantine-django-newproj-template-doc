@@ -1,5 +1,3 @@
-# Checklist
-
 ## Frontend Development
 
 ### Code Quality
