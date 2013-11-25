@@ -1,5 +1,3 @@
-# Guidelines for Development
-
 ## Spelling
 
 An initial spell check of any new document in the text editor **must** be made before committing that file to the repository. When making changes to an existing HTML template or file of any sort with hard coded strings, a spell check of the changed file(s) **must** be completed before committing.
