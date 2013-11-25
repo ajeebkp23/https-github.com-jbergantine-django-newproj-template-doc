@@ -24,11 +24,11 @@ Additionally, any FPO images committed to a project **must** have a filename pre
 
 ## Development 
 
-The Interactive Producer will be doing a code review of any code you create. Framiliarize yourself with [the go-live checklist](https://bitbucket.org/mercurycsc/web-process/src/master/3_Go_Live_Checklist.md).
+The Interactive Producer will be doing a code review of any code you create. Framiliarize yourself with [the go-live checklist](https://github.com/jbergantine/django-newproj-template/wiki/Go-Live-Checklist).
 
 ## Git
 
-The MercuryCSC Git workflow follows the [Feature Branch Workflow](http://www.atlassian.com/git/workflows#!workflow-feature-branch). 
+Git workflow follows the [Feature Branch Workflow](http://www.atlassian.com/git/workflows#!workflow-feature-branch). 
 
 ## Feature Branches
 
