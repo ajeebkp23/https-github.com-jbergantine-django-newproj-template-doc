@@ -1,3 +1,13 @@
+# Overview
+
+These directions are an alternative to those provided in the Readme for moving an existing project into Vagrant while using the project's cookbooks and Vagrantfile but not the new project template.
+
+These directions start a new Git project which may not always be ideal.
+
+These same instructions could be used to combine the Vagrantfile and cookbooks to provision a development environment for a non Django Python project or a Django project that needs to follow other conventions than those provided in the project template (say, for a deployment to Heroku). They could also be used as the base for provisioning a development environment for some entirely new technology (say, Ruby on Rails).
+
+# Directions
+
 1. Create a directory for the project and `cd` into it
 2. Initialize a Git project: `(local) $ git init && mkdir cookbooks`
 3. Load cookbooks: `(local) $ git submodule add git://github.com/opscode-cookbooks/apt.git cookbooks/apt; git submodule add git://github.com/opscode-cookbooks/build-essential.git cookbooks/build-essential; git submodule add git://github.com/opscode-cookbooks/sudo.git cookbooks/sudo; git submodule add git://github.com/opscode-cookbooks/git.git cookbooks/git; git submodule add git://github.com/opscode-cookbooks/openssl.git cookbooks/openssl; git submodule add git://github.com/opscode-cookbooks/postgresql.git cookbooks/postgresql; git submodule add git://github.com/comandrei/python.git cookbooks/python; git submodule add git://github.com/opscode-cookbooks/zlib.git cookbooks/zlib; git submodule add git://github.com/opscode-cookbooks/memcached.git cookbooks/memcached; git submodule add git://github.com/jbergantine/chef-cookbook-python-psycopg2.git cookbooks/chef-cookbook-python-psycopg2; git submodule add git://github.com/jbergantine/chef-cookbook-libjpeg.git cookbooks/chef-cookbook-libjpeg; git submodule add git://github.com/jbergantine/chef-cookbook-libfreetype.git cookbooks/chef-cookbook-libfreetype; git submodule add git://github.com/jbergantine/chef-cookbook-xapian.git cookbooks/chef-cookbook-xapian; git submodule add git://github.com/jbergantine/chef-cookbook-djangonewproj.git cookbooks/chef-cookbook-djangonewproj`
