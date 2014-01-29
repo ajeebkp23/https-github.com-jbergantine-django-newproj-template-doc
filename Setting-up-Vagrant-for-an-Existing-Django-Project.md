@@ -1,4 +1,4 @@
-# Overview
+## Overview
 
 These directions are an alternative to those provided in the Readme for moving an existing project into Vagrant while using the project's cookbooks and Vagrantfile but not the new project template.
 
@@ -6,7 +6,7 @@ These directions start a new Git project which may not always be ideal.
 
 These same instructions could be used to combine the Vagrantfile and cookbooks to provision a development environment for a non Django Python project or a Django project that needs to follow other conventions than those provided in the project template (say, for a deployment to Heroku). They could also be used as the base for provisioning a development environment for some entirely new technology (say, Ruby on Rails).
 
-# Directions
+## Directions
 
 1. Create a directory for the project and `cd` into it
 2. Initialize a Git project: `(local) $ git init && mkdir cookbooks`
