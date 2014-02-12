@@ -46,3 +46,5 @@ create a `requirements.txt` file (from [http://docs.django-cms.org/en/2.4.3/gett
 install that
 
 `$ sudo pip install -r requirements.txt`
+
+From here, follow the [directions](http://docs.django-cms.org/en/2.4.3/getting_started/tutorial.html). The postgres database is `django_db`, the user is `django_login` and the password is `secret`.
