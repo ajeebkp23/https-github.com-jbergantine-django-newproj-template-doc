@@ -105,6 +105,7 @@ _It is acceptable to only verify in the device's native browser unless the proje
     * Only email campaigns
     * Only new visitors
     * Only returning visitors
+* Setup [Facebook Insights](http://facebook.com/insights/) for the site
 
 ## Metadata
 
