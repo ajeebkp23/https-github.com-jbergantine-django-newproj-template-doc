@@ -111,21 +111,32 @@ _It is acceptable to only verify in the device's native browser unless the proje
 
 ### Favicon
 
-* Is specified in base.html.
+Ensure favicon type icons are specified in `base.html`.
 
-        <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico" />
+#### For theory, reference: 
 
-### iOS Icons
+* [_Understand the Favicon_ by Jonathan T. Neal](http://www.jonathantneal.com/blog/understand-the-favicon/)
+* [_The State of Favicons_ by Chris Coyier](http://css-tricks.com/video-screencasts/122-the-state-of-favicons/)
+* [_Everything you always wanted to know about touch icons._ by Mathias Bynens](http://mathiasbynens.be/notes/touch-icons)
 
-#### Specified in base.html to include:
+#### For Apple:
 
-* 57 x 57 px
-* 72 x 72 px
-* 114 x 114 px
+* `apple-touch-icon-152x152-precomposed.png` should be a 152x152 PNG for the iPad with high-resolution Retina display running iOS ≥ 7
+* `apple-touch-icon-120x120-precomposed.png` should be a 120x120 PNG for the iPhone with high-resolution Retina display running iOS ≥ 7
+* `apple-touch-icon-76x76-precomposed.png` should be a 76x76 PNG for the iPad mini and the first- and second-generation iPad on iOS ≥ 7
+* `apple-touch-icon-precomposed.png` should be a 57x57 PNG for non-Retina iPhone, iPod Touch, and Android 2.1+ devices
 
-        <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}images/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}images/apple-touch-icon-114x114.png" />
+#### Favicons:
+
+* `favicon.png` should be a 32x32 PNG on a solid color or transparent background
+  (FYI, the article references 96x96 but this seems to be a typo)
+* `favicon.ico` should be a combination of 16x16 and 32x32 PNGs compiled into a .ico file 
+  (use http://www.kodlian.com/apps/icon-slate to compile that .ico file)
+
+#### For Microsoft:
+
+* `tileicon.png` should be 144x144 PNG on a transparent background
+* a background tile color can be specified using a hex RGB color (e.g. `#RRGGBB`)
 
 ### Page Titles
 
