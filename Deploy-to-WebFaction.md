@@ -1,5 +1,3 @@
-# Deploying to a WebFaction Instance
-
 [Signup for a WebFaction hosting account on the WebFaction website](http://www.webfaction.com?affiliate=kinsa). Once you're signed up login to the control panel with your username and password.
 
 ## Setup Databases
